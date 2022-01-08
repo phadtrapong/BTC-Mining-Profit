@@ -5,5 +5,5 @@ Run on Local Machine
 - Open `index.html`
 
 Production Build
-- npm i
-- gulp
+- `npm i`
+- `gulp`
