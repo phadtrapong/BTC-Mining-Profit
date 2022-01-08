@@ -18,7 +18,7 @@ $( document ).ready(function() {
             .then(function (hashRate) {
                 const effifciency = $('#efficiency').val();
                 const electricityCost = $('#electricity').val();
-                $('#hash-rate').val(hashRate * Math.pow(10, -6));
+                $('#hash-rate').val(hashRate * Math.pow(10, -3));
                 $('#answer').val(( hashRate * Math.pow(10, -6) * effifciency * totalHours * electricityCost) / (6.25 * 144));
 
                 $('#calculation-status').css('display', 'none');
