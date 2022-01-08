@@ -19,7 +19,9 @@ $( document ).ready(function() {
                 const effifciency = $('#efficiency').val();
                 const electricityCost = $('#electricity').val();
                 $('#hash-rate').val(hashRate * Math.pow(10, -3));
-                $('#answer').val(( hashRate * Math.pow(10, -6) * effifciency * totalHours * electricityCost) / (6.25 * 144));
+                let result = (hashRate * Math.pow(10, -6) * effifciency * totalHours * electricityCost) / (6.25 * 144);
+                result = Math.floor(result * 100) / 100;
+                $('#answer').val(result);
 
                 $('#calculation-status').css('display', 'none');
                 $('#precalculate-status').css('display', 'block');
