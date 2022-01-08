@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="style.css" rel="stylesheet">
+  <link rel="icon" href="/bitcoin.png">
+  <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+  <title>BTC Profit Calculator</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+        <h1>BTC Profit Calculator</h1>
+    </div>
+    <div class="row mt-6">
+        <div class="col-sm-6 mt-3">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Currency</label>
+                </div>
+                <select class="custom-select" id="currency-select">
+                    <option value="$">USD</option>
+                    <option value="EUR">EUR</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-sm-6 mt-3">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">efficiency</span>
+                </div>
+                <input type="number" class="form-control" aria-label="efficiency" id="efficiency" value="31">
+                <div class="input-group-append">
+                    <span class="input-group-text">W/TH</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 mt-3">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">electricity cost</span>
+                </div>
+                <input type="number" class="form-control" aria-label="electricity" id="electricity" value="0.05">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="electricity-unit">$/kW</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 mt-3">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="hash-rate" placeholder="Current Auto Filled HashRate" aria-label="Hash rate"
+                    aria-describedby="button-addon2" readonly>
+                <div class="input-group-append">
+                    <span class="input-group-text">TH</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 mt-3">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="answer" placeholder="Result $/BTC" aria-label="result"
+                    aria-describedby="button-addon2" readonly>
+                <div class="input-group-append">
+                    <span class="input-group-text" id="profit-unit" >$/BTC</span>
+                    <button class="btn btn-outline-primary" type="button" id="button-calculate">
+                        <span id="precalculate-status">Calculate</span>
+                        <div id="calculation-status" class="spinner-border spinner-border-sm" role="status">
+                        </div>
+                    </button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+
+<div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <p class="col-md-4 mb-0 text-muted">hash rate from: <a href="https://blockchain.info" target="_blank">https://blockchain.info</a></p>
+    </footer>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="script.js" defer></script>
+
+</body>
+
+</html>
