@@ -18,7 +18,7 @@ function minifyCss(){
 }
 
 function copyHtmlAndImagesToDist() {
-    return gulp.src(['index.html', 'bitcoin.png'], { base: './' })
+    return gulp.src(['*.html', 'bitcoin.png'], { base: './' })
         .pipe(gulp.dest('dist'));
 };
 

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="icon" href="/bitcoin.png">
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+    <title>BTC Production cost calculator</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>About</h1>
+        </div>
+        <div class="content">
+            <h3>How this works</h3>
+            <p>
+                    This calculator estimates electricity cost required to mine 1 bitcoin. By assuming that the combined hashing power of
+                the entire bitcoin network would produce 900 BTC/day (at current block reward of 6.25 BTC every 10 minutes block-time).
+                We can estimate the energy cost required to produce the hash rate by multiply the network hash rate with machine
+                efficiency and electricity cost required to mining the entire bitcoin network for 1 day. Finally by dividing the energy
+                cost with amount of new bitcoin produce per day we can easily estimate the energy cost to mine 1 bitcoin.
+            </p>
+            <p>
+                Thus this calculator work by following formula
+                Energy cost of 1 bitcoin = Network hash rate (TH/s) x Miner efficiency (W/TH) x Electricity price (USD/kW) x Mining time
+                frame (1 day) / Amount of bitcoin produced (900 BTC/day)
+            </p>
+            <p>
+                The miner efficiency and electricity price is left empty so you can input these value based on your available data
+                because no one actually know the average efficiency of the machine currently mining the bitcoin network and the
+                electricity price would varies depends on the location of the miner
+            </p>
+            <p>hash rate from: <a href="https://blockchain.info" target="_blank">https://blockchain.info</a></p>
+
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <p class="col-md-4 mb-0 text-muted text-about"><a href="/index.html">Home</a></p>
+        </footer>
+    </div>
+</body>
+
+</html>
